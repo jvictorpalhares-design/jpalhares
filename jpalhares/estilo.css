@@ -1,0 +1,325 @@
+/*fundo geral*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #0d0d0d, #1f1f1f);
+    color: #d9d9d9;
+}
+
+/*cabeçalho com efeito metalico*/
+header {
+    background: linear-gradient(145deg, #1a1a1a, #333);
+    color: #f5f5f5;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid #555;
+}
+
+/*menu*/
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: #d9d9d9;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f5f5f5;
+    text-shadow: 0 0 5px #aaa;
+}
+
+/*seçao hero - Banner hero */
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    height: 100vh; /* ocupa a tela inteira */
+    color: #f5f5f5;
+
+    /* Gradiente metálico preto e cinza */
+    background: linear-gradient(135deg, #1a1a1a, #333, #1a1a1a);
+    background-size: 200% 200%;
+    animation: gradientMove 8s ease infinite;
+
+    position: relative;
+}
+
+/* Animação sutil do gradiente */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Conteúdo do hero */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilo do nome principal */
+#hero h1 {
+    font-size: 4rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px rgba(255,255,255,0.3);
+    margin-bottom: 1rem;
+}
+
+#hero h2 {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+#sobre {
+    padding: 4rem 2rem;
+    background: #1a1a1a;
+    color: #d9d9d9;
+}
+
+/* Seção de contato */
+#contato {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
+    color: #f5f5f5;
+    border-top: 2px solid #444;
+    box-shadow: inset 0 0 15px rgba(255,255,255,0.05);
+}
+
+#contato h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+#contato p {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+/* Links de contato */
+.contato-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Botões de contato */
+.contato-btn {
+    padding: 12px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Cores específicas */
+.github {
+    background: #333;
+    color: #fff;
+}
+.github:hover {
+    background: #444;
+}
+
+.linkedin {
+    background: #0077b5;
+    color: #fff;
+}
+.linkedin:hover {
+    background: #005582;
+}
+
+.insta {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: #fff;
+}
+.insta:hover {
+    opacity: 0.8;
+}
+
+.telegram {
+    background: #555;
+    color: #fff;
+}
+.telegram:hover {
+    background: #777;
+}
+
+/* Container dos cards */
+.sobre-cards {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Cada card */
+.card-info {
+    background: linear-gradient(145deg, #2a2a2a, #3a3a3a);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #555;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    text-align: justify;
+    transition: 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+.card-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(255,255,255,0.2);
+}
+
+/* Título do card */
+.card-info h3 {
+    margin-bottom: 0.8rem;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+/* Texto do card */
+.card-info p {
+    color: #d9d9d9;
+    font-size: 0.95rem;
+}
+
+.sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap; /* para responsividade */
+}
+
+/* Texto */
+.sobre-texto {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ccc;
+    text-align: justify;
+    flex: 1;
+    min-width: 300px;
+}
+
+.sobre-texto h2 {
+    margin-bottom: 1rem;
+    color: #f5f5f5;
+    border-left: 5px solid #666;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+/* Foto */
+.sobre-foto {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.sobre-foto img {
+    max-width: 250px;
+    border-radius: 0%;
+    border: 3px solid #555;
+    box-shadow: 0 0 12px rgba(255,255,255,0.2);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(145deg, #2b2b2b, #444);
+    color: #f5f5f5;
+    border: 1px solid #666;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: linear-gradient(145deg, #444, #666);
+    color: #fff;
+    box-shadow: 0 0 8px rgba(255,255,255,0.3);
+}
+
+/* Seções */
+section {
+    padding: 3rem 2rem;
+    background: #1a1a1a;
+    border-bottom: 1px solid #333;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-left: 5px solid #666;
+    padding-left: 10px;
+}
+
+
+.card {
+    background: linear-gradient(145deg, #2a2a2a, #3a3a3a);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #555;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.7), 0 2px 6px rgba(0,0,0,0.6);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(255,255,255,0.3);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+    border: 1px solid #666;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(145deg, #111, #222);
+    color: #aaa;
+    border-top: 2px solid #444;
+}
+
+/* Rodapé */
+footer {
+    background: #111; /* preto metálico */
+    color: #888;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+}
+
+footer p {
+    margin: 0;
+    letter-spacing: 1px;
+}
