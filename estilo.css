@@ -156,10 +156,18 @@ nav a:hover {
 }
 
 .telegram {
-    background: #555;
+    background: #23cbed;
     color: #fff;
 }
 .telegram:hover {
+    background: #777;
+}
+
+.e-mail {
+    background: #f03e3e;
+    color: #fff;
+}
+.e-mail:hover {
     background: #777;
 }
 
