@@ -19,7 +19,6 @@ html {
     --text-primary: #f0f0f0;
     --text-secondary: #999;
     --text-muted: #555;
-    --accent: #e0e0e0;
     --font-display: 'Syne', sans-serif;
     --font-mono: 'Space Mono', monospace;
 }
@@ -47,7 +46,6 @@ body {
     overflow: hidden;
 }
 
-/* Linhas decorativas de fundo */
 #hero::before {
     content: '';
     position: absolute;
@@ -59,7 +57,6 @@ body {
     pointer-events: none;
 }
 
-/* Brilho sutil no canto */
 #hero::after {
     content: '';
     position: absolute;
@@ -88,11 +85,11 @@ body {
 
 #hero h1 {
     font-family: var(--font-display);
-    font-size: clamp(4rem, 12vw, 9rem);
+    font-size: clamp(2.8rem, 9vw, 7rem);
     font-weight: 800;
-    line-height: 0.9;
+    line-height: 0.95;
     color: var(--text-primary);
-    letter-spacing: -3px;
+    letter-spacing: clamp(-1px, -0.3vw, -3px);
     text-transform: uppercase;
     margin-bottom: 2rem;
     animation: fadeInUp 0.7s ease 0.1s both;
@@ -107,7 +104,7 @@ body {
     animation: fadeInUp 0.7s ease 0.2s both;
 }
 
-/* ===== BOTÃO DE SCROLL ===== */
+/* ===== BOTÕES DE SCROLL ===== */
 .scroll-btn {
     position: absolute;
     bottom: 3rem;
@@ -122,6 +119,13 @@ body {
     transition: color 0.3s ease;
     z-index: 10;
     animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.scroll-btn--section {
+    position: static;
+    transform: none;
+    margin: 3rem auto 0;
+    animation: none;
 }
 
 .scroll-btn:hover {
@@ -144,7 +148,7 @@ body {
     align-items: center;
     justify-content: center;
     animation: bounce 2s ease infinite;
-    transition: background 0.3s ease, border-color 0.3s ease;
+    transition: background 0.3s ease;
 }
 
 .scroll-btn:hover .scroll-arrow {
@@ -208,11 +212,8 @@ body {
 
 .sobre-foto {
     flex: 0 0 auto;
-    text-align: center;
     width: 100%;
     max-width: 340px;
-    position: relative;
-    /* moldura embutida na parede */
     padding: 10px;
     background: #111;
     border-radius: 2px;
@@ -231,9 +232,6 @@ body {
     border-radius: 1px;
     display: block;
     filter: grayscale(10%) brightness(0.92) contrast(1.05);
-    box-shadow:
-        inset 0 0 12px rgba(0,0,0,0.6),
-        0 2px 8px rgba(0,0,0,0.8);
     transition: filter 0.4s ease;
 }
 
@@ -255,7 +253,6 @@ body {
 .card-info {
     background: var(--bg-card);
     padding: 2rem;
-    position: relative;
     transition: background 0.3s ease;
 }
 
@@ -304,17 +301,13 @@ body {
     text-transform: uppercase;
     letter-spacing: -1px;
     margin-bottom: 0.75rem;
-    border: none;
-    padding: 0;
 }
 
-#contato p {
+#contato > p {
     font-size: 1.05rem;
     color: var(--text-muted);
-    margin-bottom: 3rem;
+    margin: 0 auto 3rem;
     max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* ===== BOTÕES DE CONTATO ===== */
@@ -355,7 +348,7 @@ body {
     transform: translateY(-2px);
 }
 
-.github:hover  { border-color: #6e40c9; color: #b69cf7; }
+.github:hover   { border-color: #6e40c9; color: #b69cf7; }
 .linkedin:hover { border-color: #0077b5; color: #5baed6; }
 .insta:hover    { border-color: #e6683c; color: #f5a67a; }
 .telegram:hover { border-color: #23cbed; color: #7de3f4; }
@@ -383,8 +376,11 @@ footer p {
         text-align: center;
     }
 
-    #hero h1 {
-        letter-spacing: -1px;
+    #hero h1 { letter-spacing: -0.5px; }
+
+    #hero h2 {
+        font-size: 0.78rem;
+        letter-spacing: 1.5px;
     }
 
     .sobre-container {
@@ -398,11 +394,26 @@ footer p {
         width: 65vw;
     }
 
-    .sobre-cards {
-        grid-template-columns: 1fr;
+    .sobre-cards { grid-template-columns: 1fr; }
+
+    .contato-links { gap: 0.5rem; }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: clamp(2.2rem, 11vw, 3rem);
+        letter-spacing: 0px;
     }
 
-    .contato-links {
-        gap: 0.5rem;
+    #hero h2 {
+        font-size: 0.72rem;
+        letter-spacing: 1px;
+    }
+
+    .hero-tag { font-size: 0.75rem; }
+
+    .contato-btn {
+        font-size: 0.75rem;
+        padding: 0.75rem 1rem;
     }
 }
